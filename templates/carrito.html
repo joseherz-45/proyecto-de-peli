@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Carrito de Películas</h1>
+        <ul class="list-group">
+            {% for pelicula in peliculas %}
+                <li class="list-group-item">
+                    <h5>{{ pelicula.title }}</h5>
+                    <p>{{ pelicula.overview }}</p>
+                    <p><strong>Fecha de lanzamiento:</strong> {{ pelicula.release_date }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="btn btn-primary mt-3">Volver a la lista de películas</a>
+    </div>
+</body>
+</html>

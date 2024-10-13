@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Bootstrap</title>
+    <!-- CSS de Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Formulario</h2>
+        <form action="/agregar_pelicula" method="POST" enctype="multipart/form-data">
+            <!-- Título -->
+            <input type="hidden" id="movie-id" name="movie_id">
+            <div class="form-group">
+                <label for="titulo">Título</label>
+                <input type="text" class="form-control" id="titulo" name="title" placeholder="Ingrese el título" required>
+            </div>
+            <!-- Descripción -->
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea class="form-control" id="overview" name="overview" rows="3" placeholder="Escribe la descripción" required></textarea>
+            </div>
+            <!-- Fecha -->
+            <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="date" class="form-control" id="release_date" name="release_date" required>
+            </div>
+            <!-- Imagen -->
+            <div class="form-group">
+                <label for="imagen">Agregar imagen</label>
+                <input type="file" class="form-control-file" id="image_file" name="image_file" accept="image/*">
+            </div>
+            <!-- Botones de Enviar y Cancelar -->
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="reset" class="btn btn-secondary ml-2" id="cancel-crear">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
